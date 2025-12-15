@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companion AI - Memory & Personality Engine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🧠 Companion AI</h1>
+      <p class="subtitle">Memory Extraction & Personality Engine Demo</p>
+    </header>
+
+    <!-- API Key Input -->
+    <section class="api-section">
+      <div class="api-input-group">
+        <label for="apiKey">OpenAI API Key:</label>
+        <input type="password" id="apiKey" placeholder="sk-..." autocomplete="off">
+        <button id="initBtn" class="btn btn-primary">Initialize System</button>
+      </div>
+      <p class="api-note">Your API key is only used client-side and never stored.</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent" style="display: none;">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" data-tab="memories">📊 Memory Extraction</button>
+        <button class="tab" data-tab="personality">🎭 Personality Comparison</button>
+        <button class="tab" data-tab="chat">💬 Interactive Chat</button>
+      </div>
+
+      <!-- Memory Extraction Tab -->
+      <section class="tab-content active" id="memories-tab">
+        <div class="section-header">
+          <h2>Memory Extraction Results</h2>
+          <p>Extracted from 30 sample chat messages</p>
+        </div>
+
+        <div class="memory-grid">
+          <!-- Preferences -->
+          <div class="memory-card">
+            <h3>❤️ User Preferences</h3>
+            <div id="preferencesContent" class="memory-content">
+              <div class="loading">Extracting...</div>
+            </div>
+          </div>
+
+          <!-- Emotional Patterns -->
+          <div class="memory-card">
+            <h3>🎭 Emotional Patterns</h3>
+            <div id="emotionalContent" class="memory-content">
+              <div class="loading">Extracting...</div>
+            </div>
+          </div>
+
+          <!-- Facts -->
+          <div class="memory-card">
+            <h3>📝 Facts Worth Remembering</h3>
+            <div id="factsContent" class="memory-content">
+              <div class="loading">Extracting...</div>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="memory-card full-width">
+            <h3>👤 Overall Profile</h3>
+            <div id="profileContent" class="memory-content">
+              <div class="loading">Extracting...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample Messages Viewer -->
+        <div class="sample-messages">
+          <h3>📨 Sample Chat Messages (Click to expand)</h3>
+          <details>
+            <summary>View all 30 messages used for extraction</summary>
+            <div id="messagesContent" class="messages-list"></div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Personality Comparison Tab -->
+      <section class="tab-content" id="personality-tab">
+        <div class="section-header">
+          <h2>Personality Response Comparison</h2>
+          <p>See how different personalities respond to the same message</p>
+        </div>
+
+        <!-- Test Scenario Selector -->
+        <div class="scenario-selector">
+          <label for="scenarioSelect">Select Test Scenario:</label>
+          <select id="scenarioSelect">
+            <option value="emotionalSupport">Emotional Support Needed</option>
+            <option value="celebration">Celebration/Good News</option>
+            <option value="adviceSeeking">Seeking Advice</option>
+            <option value="validation">Need Validation</option>
+            <option value="encouragement">Need Encouragement</option>
+            <option value="custom">Custom Message</option>
+          </select>
+        </div>
+
+        <div class="custom-input" id="customInput" style="display: none;">
+          <textarea id="customMessage" placeholder="Type your custom message..."></textarea>
+        </div>
+
+        <div class="test-message-display">
+          <strong>Test Message:</strong>
+          <p id="testMessageDisplay"></p>
+        </div>
+
+        <button id="compareBtn" class="btn btn-primary btn-large">🔄 Generate Personality Responses</button>
+
+        <!-- Comparison Results -->
+        <div id="comparisonResults" class="comparison-grid">
+          <!-- Results will be inserted here -->
+        </div>
+      </section>
+
+      <!-- Interactive Chat Tab -->
+      <section class="tab-content" id="chat-tab">
+        <div class="section-header">
+          <h2>Interactive Chat</h2>
+          <p>Chat with the AI using different personalities</p>
+        </div>
+
+        <div class="chat-container">
+          <!-- Personality Selector -->
+          <div class="personality-selector">
+            <label>Select Personality:</label>
+            <div class="personality-buttons" id="personalityButtons">
+              <!-- Buttons will be inserted here -->
+            </div>
+          </div>
+
+          <!-- Chat Window -->
+          <div class="chat-window" id="chatWindow">
+            <div class="chat-welcome">
+              <p>👋 Select a personality and start chatting!</p>
+              <p class="hint">The AI will use extracted memories to personalize responses.</p>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="chat-input-container">
+            <textarea id="chatInput" placeholder="Type your message..." rows="2"></textarea>
+            <button id="sendBtn" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <p id="loadingText">Initializing...</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
