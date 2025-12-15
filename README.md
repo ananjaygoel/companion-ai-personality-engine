@@ -4,7 +4,7 @@ A modular AI companion system that extracts memories from user conversations and
 
 ## 🚀 Live Demo
 
-🌐 **Live App:** [https://ass-apg21605-gmailcoms-projects.vercel.app](https://ass-apg21605-gmailcoms-projects.vercel.app)
+🌐 **Live App:** [https://companion-ai-personality-engine.netlify.app](https://companion-ai-personality-engine.netlify.app)
 
 📂 **GitHub:** [https://github.com/ananjaygoel/companion-ai-personality-engine](https://github.com/ananjaygoel/companion-ai-personality-engine)
 

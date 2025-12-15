@@ -31,3 +31,6 @@ npm-debug.log*
 api-keys.txt
 secrets.json
 .vercel
+
+# Local Netlify folder
+.netlify
