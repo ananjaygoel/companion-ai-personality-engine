@@ -4,7 +4,9 @@ A modular AI companion system that extracts memories from user conversations and
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-deployment-url.vercel.app)
+🌐 **Live App:** [https://ass-apg21605-gmailcoms-projects.vercel.app](https://ass-apg21605-gmailcoms-projects.vercel.app)
+
+📂 **GitHub:** [https://github.com/ananjaygoel/companion-ai-personality-engine](https://github.com/ananjaygoel/companion-ai-personality-engine)
 
 ## 📖 Overview
 

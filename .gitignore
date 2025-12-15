@@ -30,3 +30,4 @@ npm-debug.log*
 # API keys (never commit these!)
 api-keys.txt
 secrets.json
+.vercel
